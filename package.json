@@ -1,0 +1,32 @@
+{
+  "name": "react-learn",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@codaworks/react-glow": "^1.0.3",
+    "@react-hook/window-size": "^3.1.1",
+    "autoprefixer": "10.4.15",
+    "babel-plugin-macros": "^3.1.0",
+    "eslint-config-next": "^13.5.6",
+    "framer-motion": "^10.16.12",
+    "gh-pages": "^6.1.0",
+    "gsap": "^3.12.3",
+    "locomotive-scroll": "^5.0.0-beta.11",
+    "next": "^13.5.6",
+    "normalize-wheel": "^1.0.1",
+    "postcss": "8.4.29",
+    "react": "^18.2.0",
+    "react-animated-cursor": "^2.11.2",
+    "react-dom": "^18.2.0",
+    "react-hook": "^0.0.1",
+    "react-icons": "^4.10.1",
+    "react-use": "^17.4.2",
+    "tailwindcss": "3.3.3"
+  }
+}
