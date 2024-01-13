@@ -16,13 +16,22 @@ const Myfunction = ()=>{
   
 
 
-  useEffect(()=>{
-    const locomotiveScroll = (()=>{import(LocomotiveScroll)})
-    const scroll = new LocomotiveScroll()
-    
-  }, 
-  [])
-  
+  useEffect(() => {
+    const loadLocomotiveScroll = async () => {
+      // Import the LocomotiveScroll module
+      const { default: LocomotiveScroll } = await import('locomotive-scroll');
+
+      // Create an instance of LocomotiveScroll
+      const scroll = new LocomotiveScroll({
+        // Pass any configuration options here
+      });
+    };
+
+    // Call the async function
+    loadLocomotiveScroll();
+  }, []);
+
+
   const header = useRef(null)
   const hero = useRef(null)
   const marquee = useRef(null)

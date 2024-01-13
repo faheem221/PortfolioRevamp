@@ -1,3 +1,4 @@
+'use client'
 import React, { forwardRef, useLayoutEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import gsap from "gsap"
