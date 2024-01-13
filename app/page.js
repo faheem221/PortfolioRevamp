@@ -11,10 +11,26 @@ import Project from "@/components/Projects.js"
 import "./locomotiveScroll.css"
 import AnimatedCursor from "react-animated-cursor";
 import Strip from "@/components/Strips";
-
+import LocomotiveScroll from "locomotive-scroll";
 const Myfunction = ()=>{
   
+  useEffect(() => {
+    const loadLocomotiveScroll = async () => {
+      // Check if the code is running in the browser environment
+      if (typeof window !== 'undefined') {
+        // Import the LocomotiveScroll module
+        const { default: LocomotiveScroll } = await import('locomotive-scroll');
 
+        // Create an instance of LocomotiveScroll
+        const scroll = new LocomotiveScroll({
+          // Pass any configuration options here
+        });
+      }
+    };
+
+    // Call the async function
+    loadLocomotiveScroll();
+  }, []);
 
   
   const header = useRef(null)
