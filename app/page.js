@@ -14,23 +14,22 @@ import Strip from "@/components/Strips";
 import LocomotiveScroll from "locomotive-scroll";
 const Myfunction = ()=>{
   
-  useEffect(() => {
-    const loadLocomotiveScroll = async () => {
-      // Check if the code is running in the browser environment
-      if (typeof window !== 'undefined') {
-        // Import the LocomotiveScroll module
-        const { default: LocomotiveScroll } = await import('locomotive-scroll');
+  uuseEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Import and use LocomotiveScroll only on the client side
+      const scroll = new LocomotiveScroll({
+        el: scrollContainerRef.current, // Use a ref to specify the scroll container element
+        // Other LocomotiveScroll options here
+      });
 
-        // Create an instance of LocomotiveScroll
-        const scroll = new LocomotiveScroll({
-          // Pass any configuration options here
-        });
-      }
-    };
-
-    // Call the async function
-    loadLocomotiveScroll();
-  }, []);
+      // Cleanup function to destroy LocomotiveScroll on component unmount
+      return () => {
+        if (scroll) {
+          scroll.destroy();
+        }
+      };
+    }
+  }, []); 
 
   
   const header = useRef(null)
