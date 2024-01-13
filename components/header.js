@@ -123,7 +123,7 @@ const head = forwardRef((props, ref)=>{
                  <AnimatePresence mode='wait'>
                  {
                     ham?
-                    <motion.div initial={{scale:0}} animate={{scale:1, transformOrigin:"top right"}} exit={{scale:0, opacity:0}} transition={{type:'spring', duration:.8}}  className='absolute flex flex-col w-[450px] h-[550px]   bg-red-500 top-[-.5em] right-[-.5em] rounded-3xl z-[-2] overflow-hidden'>
+                    <motion.div initial={{scale:0}} animate={{scale:1, transformOrigin:"top right"}} exit={{scale:0, opacity:0}} transition={{type:'spring', duration:.8}}  className='absolute flex flex-col w-[500px] h-[80vh] max-h-[750px]   bg-red-500 top-[-.5em] right-[-.5em] rounded-3xl z-[-2] overflow-hidden'>
                         <motion.div variants={textAnime} initial="initial" animate="animate"  className='flex flex-col w-full justify-center overflow-hidden h-full gap-2 px-5 heroBox'>
                                {
                                 navLinks.map((items)=>{

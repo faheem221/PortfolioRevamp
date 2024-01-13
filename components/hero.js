@@ -34,7 +34,7 @@ const hero=forwardRef((props,ref)=>{
     return(
         <React.Fragment>
         <div className="flex w-full justify-center items-center relative overflow-hidden" ref={hero}>
-            <motion.div  variants={textAnime} animate='animate' initial='initial'  className="flex flex-col w-[95%] ipad-tablet:h-[40vh] desktop:h-full px-5 leading-snug font-[600] mt-4">
+            <motion.div  variants={textAnime} animate='animate' initial='initial'  className="flex flex-col w-[95%] ipad-tablet:h-[40vh] desktop:h-[90vh] px-5 leading-snug font-[600] mt-4">
 
                 <motion.div className="heroBox  w-full " >
                         <motion.svg variants={textAnime} className=""  width="1018" height="208" viewBox="0 0 1018 208" fill="none" xmlns="http://www.w3.org/2000/svg">

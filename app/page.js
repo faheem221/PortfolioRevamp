@@ -11,26 +11,22 @@ import Project from "@/components/Projects.js"
 import "./locomotiveScroll.css"
 import AnimatedCursor from "react-animated-cursor";
 import Strip from "@/components/Strips";
-import LocomotiveScroll from "locomotive-scroll";
+
 const Myfunction = ()=>{
   
-  uuseEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Import and use LocomotiveScroll only on the client side
+
+
+  useEffect(()=>{
+    useEffect(() => {
       const scroll = new LocomotiveScroll({
-        el: scrollContainerRef.current, // Use a ref to specify the scroll container element
-        // Other LocomotiveScroll options here
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+        smoothMobile: false,
       });
-
-      // Cleanup function to destroy LocomotiveScroll on component unmount
-      return () => {
-        if (scroll) {
-          scroll.destroy();
-        }
-      };
-    }
-  }, []); 
-
+    }, []);
+    
+  }, 
+  [])
   
   const header = useRef(null)
   const hero = useRef(null)
