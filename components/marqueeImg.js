@@ -12,20 +12,29 @@ const marqueeImg =forwardRef((props, ref) => {
   let xPercent = 0;
   let direction = -1;
 
-  useEffect( () => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.25,
-        start: 0,
-        end: window.innerHeight,
-        onUpdate: e => direction = e.direction * -1
-      },
-      x: "-000px",
-    })
-    requestAnimationFrame(animate);
-  }, [])
+  useEffect(() => {
+    // Check if the code is running in the browser environment
+    if (typeof window !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(slider.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: 0.25,
+          start: 0,
+          end: window.innerHeight,
+          onUpdate: (e) => {
+            // Assuming you have a 'direction' variable defined outside this scope
+            direction = e.direction * -1;
+          },
+        },
+        x: "-000px", // Check this value, looks like there might be a typo
+      });
+
+      // Assuming you have a 'direction' variable defined outside this scope
+      requestAnimationFrame(animate);
+    }
+  }, [slider]);
 
   const animate = () => {
     if(xPercent < -100){
