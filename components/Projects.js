@@ -87,7 +87,7 @@ const Projects = forwardRef((props, ref) => {
                       
          
                     return(
-                      <div className='w-full flex justify-between px-5 py-10  items-center border-t border-red-500 relative' onMouseEnter={()=>{mouseenter((project.id))}} onMouseLeave={mouseleave}  >
+                      <div className='w-full flex justify-between px-5 py-10  items-center border-t border-red-500 relative' key={project.id} onMouseEnter={()=>{mouseenter((project.id))}} onMouseLeave={mouseleave}  >
                           <p className='text-[4.5em] font-Satoshi text-red-400 font-bold'>{project.name}</p>
                           <p className='text-[2.4em] font-Satoshi text-red-400 '>{project.year}</p>
                           {

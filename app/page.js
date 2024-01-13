@@ -6,7 +6,6 @@ import Marquee from "@/components/marqueeImg.js"
 import Responsive from "@/components/Responsive.js"
 import Footer from "@/components/footer.js"
 import DEs from "@/components/DE.js"
-import WorkProcess from "@/components/Work-Process.js"
 import Project from "@/components/Projects.js"
 import "./locomotiveScroll.css"
 import AnimatedCursor from "react-animated-cursor";
@@ -14,20 +13,19 @@ import Strip from "@/components/Strips";
 
 const Myfunction = ()=>{
   
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+      }
+    )()
+  }, [])
 
 
-  useEffect(()=>{
-    useEffect(() => {
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true,
-        smoothMobile: false,
-      });
-    }, []);
-    
-  }, 
-  [])
-  
+
+
+
   const header = useRef(null)
   const hero = useRef(null)
   const marquee = useRef(null)
