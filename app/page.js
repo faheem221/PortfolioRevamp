@@ -11,17 +11,11 @@ import Project from "@/components/Projects.js"
 import "./locomotiveScroll.css"
 import AnimatedCursor from "react-animated-cursor";
 import Strip from "@/components/Strips";
-import LocomotiveScroll from "locomotive-scroll";
+
 const Myfunction = ()=>{
   
 
 
-  useEffect(()=>{
-    const locomotiveScroll = (()=>{import(LocomotiveScroll)})
-    const scroll = new LocomotiveScroll()
-    
-  }, 
-  [])
   
   const header = useRef(null)
   const hero = useRef(null)
