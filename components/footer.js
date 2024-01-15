@@ -1,12 +1,16 @@
 'use client'
-import React, {forwardRef, useRef, useImperativeHandle} from "react";
-
+import React, {forwardRef, useRef, useImperativeHandle, useEffect} from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const footer = forwardRef((props, ref)=>{
+
+      
+   
  
     return(
         <section  ref={ref} className="">
-            <div className="w-full flex justify-center absolute  items-center flex-col iphone:mt-10   bg-[#FFACAC] rounded-t-2xl" >
+            <div   className="w-full flex justify-center absolute  items-center flex-col    bg-[#FFACAC] rounded-t-2xl" >
                 <div className="w-full max-w-[1200px] px-5 flex justify-between iphone:flex-col ipad-tablet:flex-row mt-5">
                     <div className="iphone:text-center ipad-tablet:text-left">
                         <div >

@@ -43,26 +43,62 @@ const myProjects =[
 
 
 const Projects = forwardRef((props, ref) => {
-  const imgRef = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [ismouseIn, setIsMouseIn] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [isMouseIn, setIsMouseIn] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [imgPos, setImgPos] = useState({
+    top: null,
+    left: null,
+    x: null,
+    y: null,
+    bottom: null,
+    right: null,
+    width: null,
+    height: null,
+  });
+  const imgRef = useRef(null);
 
-  const mouseenter = (index) =>{
-    gsap.to(imgRef.current, {autoAlpha:1})
-    setActiveIndex(index)
-    setIsMouseIn(true)
-  }
+  const handleImageLoad = () => {
+    const { right, x, bottom, y, height } =
+      imgRef.current.getBoundingClientRect();
 
-  const mouseleave = () =>{
-    gsap.to(imgRef.current, {autoAlpha:0})
-    setActiveIndex(null)
-    setIsMouseIn(false)
-  }
+    setImgPos({
+      left: right - x,
+      top: bottom - y,
+      height: height,
+    });
+  };
 
+  const mouseEnter = (index) => {
+    setActiveIndex(index);
+    setIsMouseIn(true);
+  };
+
+  const mouseLeave = () => {
+    setActiveIndex(null);
+    setIsMouseIn(false);
+  };
+
+  const mouseMove = (e) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+  };
+
+  useEffect(() => {
+    if (imgRef.current) {
+      handleImageLoad()
+    }
+
+    return () => {
+      if (imgRef.current) {
+        handleImageLoad()
+      }
+    };
+  }, [imgRef]);
+  
 
 
   return (
-    <div className='w-full flex flex-col   justify-center items-center mt-10' ref={ref}>
+    <div className='w-full flex flex-col justify-center items-center mt-10' ref={ref}>
         <div className='w-[95%]'>
                 <div>
                     <svg width="767" height="115" viewBox="0 0 767 115" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,14 +123,10 @@ const Projects = forwardRef((props, ref) => {
                       
          
                     return(
-                      <div className='w-full flex justify-between px-5 py-10  items-center border-t border-red-500 relative' key={project.id} onMouseEnter={()=>{mouseenter((project.id))}} onMouseLeave={mouseleave}  >
-                          <p className='text-[4.5em] font-Satoshi text-red-400 font-bold'>{project.name}</p>
+                      <div className='w-full flex justify-between px-5 py-10  items-center border-t border-red-500 relative group' key={project.id} onMouseMove={(e)=>{mouseMove(e)}}  onMouseEnter={()=>{mouseEnter((project.id))}} onMouseLeave={mouseLeave}  >
+                          <p className='text-[4.5em] font-Satoshi text-red-400 font-bold group-hover:translate-x-[100px] transition-all duration-300 ease-out'>{project.name}</p>
                           <p className='text-[2.4em] font-Satoshi text-red-400 '>{project.year}</p>
-                          {
-                            ismouseIn 
-                            &&
-                             activeIndex === project.id  && <img  ref={imgRef} src={project.img} className='w-[400px] pointer-events-none border border-slate-900 absolute'  /> 
-                          }
+                          <img  ref={imgRef} style={{transform: `translateX(${mousePos.x-60-imgPos.left/2}px) translateY(${mousePos.y-200}px) `, transition: 'all 0.2s ease-out', top:0, bottom:0}} src={activeIndex===project.id&&project.img} className='w-[400px] pointer-events-none fixed z-[22]'   /> 
                   </div> 
                     )
                   })

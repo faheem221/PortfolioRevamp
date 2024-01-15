@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <head>
         <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,300,400&display=swap" rel="stylesheet"></link>
         </head>
-      <body className={inter.className}>{children}</body>
+      <body  className={inter.className}>{children}</body>
 
     </html>
   )
