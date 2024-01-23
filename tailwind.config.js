@@ -54,11 +54,11 @@ module.exports = {
           },
           '100%':{
             borderRadius:'0 0 0 0'
-          }
+          },
         }
         
       }
-  
+      
     },
   },
   plugins: [

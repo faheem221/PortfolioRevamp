@@ -14,10 +14,10 @@ const responsive=forwardRef((props,ref)=>{
     return(
         <React.Fragment>    
             <div className="w-full flex justify-center items-center iphone:mt-20 ipad-tablet:mt-[300px] relative z-[1]"  ref={ref}>
-                <div className="heroBox flex w-[95%] flex-col items-center w-ful px-5    rounded-3xl">
+                <div className="heroBox flex w-[95%] flex-col items-center w-ful iphone:px-0 ipad-tablet:px-5    rounded-3xl">
                    
-                       <div  className="boxex flex w-[95%] justify-end absolute z-[-9] top-[-160px]">
-                        <motion.svg className={'iphone:h-[10vw] iphone:w-auto   ipad-tablet:h-[10vw]'} whileInView={{x:[-100, 0],opacity:[1], y:[220, 0],  rotateX:[-25, 0], rotateY:[ -5,0]}}  transition={{ease:[.24,.93,.67,.95], duration:1.1}} viewport={{once:false}}  width="727" height="147" viewBox="0 0 727 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <div  className="boxex flex w-[95%] justify-end absolute z-[-9] iphone:top-[-40px] ipad-tablet:top-[-160px]">
+                        <motion.svg className={'iphone:h-[10vw] iphone:w-auto   ipad-tablet:h-[10vw]'} whileInView={{x:[-100, 0],opacity:[1], y:[220, 0],  rotateX:[-25, 0], rotateY:[ -5,0]}}  transition={{ease:[.24,.93,.67,.95], duration:1.1}} viewport={{once:true}}  width="727" height="147" viewBox="0 0 727 147" fill="none" xmlns="http://www.w3.org/2000/svg">
                
                             
                             <path d="M82.8549 112L74.7949 90.1449H29.8449L21.7849 112H0.859863L40.5399 6.59991H65.1849L104.865 112H82.8549ZM49.2199 37.9099L35.8899 74.0249H68.7499L55.4199 37.9099L52.3199 27.0599L49.2199 37.9099Z" fill="#0B0B0B"/>
@@ -34,7 +34,7 @@ const responsive=forwardRef((props,ref)=>{
                         </motion.svg>
                        </div>
                        
-                        <div className=" mt-2  flex justify-center items-center bg-no-repeat  bg-cover bg-center w-full h-full bg-slate-100 rounded-[20px]"  >
+                        <div className=" mt-2   flex justify-center items-center bg-no-repeat  bg-cover bg-center w-full h-full bg-slate-100 iphone:rounded-xl ipad-tablet:rounded-[20px]"  >
 
                             <img className=" mt-10" src={"./resp.svg"} />
                         </div>
