@@ -132,7 +132,7 @@ const strip = forwardRef(( props, ref)=>{
                     start: "+=150px",
                     end: "+=450px",
                     scrub: 2,
-                    markers:true
+                    
                   },
                   x: "55vw",
                   y: "-7rem",
@@ -144,7 +144,7 @@ const strip = forwardRef(( props, ref)=>{
                     start: "+=150px",
                     end: "+=450px",
                     scrub: 2,
-                    markers:true
+                    
                   },
                   x: "-70vw",
                   y: "-40%",
@@ -155,7 +155,7 @@ const strip = forwardRef(( props, ref)=>{
                     start: "end",
                     end: "+=650px",
                     scrub: 2,
-                    markers:true
+                    
                      
                   },
                   x: "60vw",
@@ -168,7 +168,7 @@ const strip = forwardRef(( props, ref)=>{
                      start: "end",
                      end: "+=670px",
                      scrub: 2,
-                     markers:true
+
                    },
                    x: "-65vw",
                    y: -150,

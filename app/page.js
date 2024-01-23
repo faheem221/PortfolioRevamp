@@ -62,7 +62,7 @@ const Myfunction = () => {
       ref: project,
     },
   };
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh();
