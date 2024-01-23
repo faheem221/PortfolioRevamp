@@ -108,7 +108,7 @@ const strip = forwardRef(( props, ref)=>{
                     start: "top",
                     end: "bottom",
                     scrub: 2,
-                    markers:true
+                   
               
                   },
                   x: "60vw",
