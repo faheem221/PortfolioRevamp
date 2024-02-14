@@ -15,7 +15,7 @@ const strip = forwardRef(( props, ref)=>{
         
         
         if(props.refStore.desRef.ref.current){
-            console.log(props.refStore.desRef.ref.current);
+       
             let mm = gsap.matchMedia();
 
             mm.add("(min-width:350px)", ()=>{
