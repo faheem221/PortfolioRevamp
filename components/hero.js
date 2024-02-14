@@ -22,7 +22,6 @@ const hero = forwardRef((props, ref) => {
       rotateY: [17, 0],
       rotate: [5, 0],
       y: [170, 0],
-      
 
       transition: {
         staggerChildren: 0.3,
@@ -36,7 +35,7 @@ const hero = forwardRef((props, ref) => {
     <React.Fragment>
       <div
         className="flex w-full iphone:h-[60vh] ipad-tablet:h-[calc(100vh-35px)]   justify-center items-start relative overflow-hidden"
-        ref={hero}
+        ref={ref}
       >
         <motion.div
           variants={textAnime}
@@ -202,8 +201,8 @@ const hero = forwardRef((props, ref) => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M107 214C166.094 214 214 166.094 214 107C214 47.9055 166.094 0 107 0C47.9055 0 0 47.9055 0 107C0 166.094 47.9055 214 107 214ZM107 184.189C149.63 184.189 184.189 149.63 184.189 107C184.189 64.3697 149.63 29.8109 107 29.8109C64.3697 29.8109 29.8109 64.3697 29.8109 107C29.8109 149.63 64.3697 184.189 107 184.189Z"
               fill="#FFBFBF"
             />
