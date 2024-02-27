@@ -161,7 +161,7 @@ const Projects = forwardRef((props, ref) => {
             return (
               <Link key={project.id} href={project.link}>
                 <div
-                  className="w-full flex justify-between px-5 py-10  items-center border-t border-red-500 relative group"
+                  className="w-full flex justify-between px-5 py-10  items-center border-t border-slate-900 relative group"
                   onMouseMove={(e) => {
                     mouseMove(e);
                   }}
@@ -170,10 +170,10 @@ const Projects = forwardRef((props, ref) => {
                   }}
                   onMouseLeave={mouseLeave}
                 >
-                  <p className="iphone:text-[2rem] ipad-tablet:text-[5rem] font-Satoshi text-red-400 font-bold group-hover:translate-x-[50%]  transition-all duration-300 ease-out">
+                  <p className="iphone:text-[2rem] ipad-tablet:text-[4rem] font-Satoshi text-slate-900 font-bold group-hover:translate-x-[50%]  transition-all duration-300 ease-out">
                     {project.name}
                   </p>
-                  <p className="iphone:text-[1.3rem] ipad-tablet:text-[4rem] font-Satoshi text-red-400 ">
+                  <p className="iphone:text-[1rem] ipad-tablet:text-[4rem] font-Satoshi text-slate-900 ">
                     {project.year}
                   </p>
                   <img
@@ -186,7 +186,7 @@ const Projects = forwardRef((props, ref) => {
                       top: 0,
                       bottom: 0,
                     }}
-                    src={activeIndex === project.id ? project.img:undefined}
+                    src={activeIndex === project.id ? project.img : undefined}
                     className="w-[400px] iphone:hidden ipad-tablet:block  pointer-events-none fixed z-[22]"
                   />
                 </div>

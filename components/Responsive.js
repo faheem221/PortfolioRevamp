@@ -34,9 +34,9 @@ const responsive=forwardRef((props,ref)=>{
                         </motion.svg>
                        </div>
                        
-                        <div className=" mt-2   flex justify-center items-center bg-no-repeat  bg-cover bg-center w-full h-full bg-slate-100 iphone:rounded-xl ipad-tablet:rounded-[20px]"  >
+                        <div className=" mt-2   flex justify-center items-center bg-no-repeat  bg-cover bg-center w-full h-full  iphone:rounded-xl ipad-tablet:rounded-[20px]"  >
 
-                            <img className=" mt-10" src={"./resp.svg"} />
+                            <img className=" mt-10" src={"./ImgThree.jpg"} />
                         </div>
 
                         

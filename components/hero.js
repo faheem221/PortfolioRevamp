@@ -204,7 +204,7 @@ const hero = forwardRef((props, ref) => {
               fillRule="evenodd"
               clipRule="evenodd"
               d="M107 214C166.094 214 214 166.094 214 107C214 47.9055 166.094 0 107 0C47.9055 0 0 47.9055 0 107C0 166.094 47.9055 214 107 214ZM107 184.189C149.63 184.189 184.189 149.63 184.189 107C184.189 64.3697 149.63 29.8109 107 29.8109C64.3697 29.8109 29.8109 64.3697 29.8109 107C29.8109 149.63 64.3697 184.189 107 184.189Z"
-              fill="#FFBFBF"
+              className="fill-gray-200"
             />
             <path
               d="M198.5 107C198.5 157.534 157.534 198.5 107 198.5C56.4659 198.5 15.5 157.534 15.5 107C15.5 56.4659 56.4659 15.5 107 15.5C157.534 15.5 198.5 56.4659 198.5 107Z"
@@ -215,7 +215,7 @@ const hero = forwardRef((props, ref) => {
           <motion.div
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             whileInView={{ offsetDistance: ["0%", "100%"] }}
-            className=" w-[25px] h-[25px] bg-red-300 rounded-full  absolute top-0 left-0 circle"
+            className=" w-[25px] h-[25px] bg-yellow-300 rounded-full  absolute top-0 left-0 circle"
           ></motion.div>
         </div>
 
@@ -241,7 +241,7 @@ const hero = forwardRef((props, ref) => {
               repeatType: "reverse",
             }}
             whileInView={{ offsetDistance: ["0%", "100%"] }}
-            className=" w-[35px] h-[35px] bg-cyan-300 rounded-full absolute top-0 left-0 circleLast"
+            className=" w-[35px] h-[35px] bg-yellow-300 rounded-full absolute top-0 left-0 circleLast"
           ></motion.div>
         </div>
       </div>
