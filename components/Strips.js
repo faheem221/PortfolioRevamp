@@ -16,83 +16,7 @@ const strip = forwardRef(( props, ref)=>{
        
             let mm = gsap.matchMedia();
 
-            mm.add("(min-width:350px)", ()=>{
-                gsap.to(stripOneRef.current, {
-                  scrollTrigger: {
-                    trigger: props.refStore.desRef.ref.current,
-                    start: "center",
-                    end: "bottom",
-                    scrub:1
-                    
-                  },
-                  x: "60vw",
-                  y: "8em",
-         
-                  
-                });
 
-                gsap.to(stripTwoRef.current, {
-                  scrollTrigger: {
-                    trigger: props.refStore.desRef.ref.current,
-                    start: "center",
-                    end: "+=450px",
-                    scrub: 1,
-                  },
-                  x: "-100%",
-                  y: "4em",
-               
-                });
-
-                 gsap.to(stripThreeRef.current, {
-                   scrollTrigger: {
-                     trigger: props.refStore.desRef.ref.current,
-                     start: "center",
-                     end: "+=300px",
-                
-                     scrub: 1,
-                   },
-                   x: "60%",
-                   y: "-5em",
-             
-                 });
-
-                 gsap.to(stripFourRef.current, {
-                   scrollTrigger: {
-                     trigger: props.refStore.desRef.ref.current,
-                     start: "end",
-                     end: "+=350px",
-                     scrub: 1,
-                   },
-                   x: "-70vw",
-                   y: "-4em",
-            
-                  
-                 });
-
-                 gsap.to(stripFiveRef.current, {
-                   scrollTrigger: {
-                     trigger: props.refStore.desRef.ref.current,
-                     start: "end",
-                     end: "+=400px",
-                     scrub: 1,
-                   },
-                   x: "100%",
-                   y: "-5em",
-     
-     
-                 });
-                 gsap.to(stripSixRef.current, {
-                   scrollTrigger: {
-                     trigger: props.refStore.desRef.ref.current,
-                     start: "end",
-                     end: "+=670px",
-                     scrub: 1,
-                   },
-                   x: "-100%",
-                   y: "-5em",
-                 });
-
-            })
 
 
 
@@ -156,7 +80,7 @@ const strip = forwardRef(( props, ref)=>{
                     
                      
                   },
-                  x: "60vw",
+                  x: "70vw",
                   y: -150,
                 });
 
