@@ -38,6 +38,8 @@ const responsive=forwardRef((props,ref)=>{
 
                             <img className=" mt-10" src={"./resp.svg"} />
                         </div>
+
+                        
                 </div>
             </div>
         </React.Fragment>

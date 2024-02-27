@@ -5,13 +5,11 @@
 @tailwind utilities;
 
 /* styles.css */
-@media (prefers-color-scheme: dark) {
-    body{
+ 
+  
+ body{
       background-color: #FED1D1;
     }
-  }
-  
-
 @keyframes down_top{
   0%{
     transform: rotateX(-70deg);

@@ -12,8 +12,6 @@ const strip = forwardRef(( props, ref)=>{
     const stripSixRef = useRef(null)
 
     useEffect(()=>{
-        
-        
         if(props.refStore.desRef.ref.current){
        
             let mm = gsap.matchMedia();

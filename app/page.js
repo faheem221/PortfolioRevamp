@@ -1,5 +1,11 @@
 "use client";
-import React, { useState, useRef, useEffect, useImperativeHandle, useLayoutEffect } from "react";
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  useImperativeHandle,
+  useLayoutEffect,
+} from "react";
 import Header from "@/components/header.js";
 import Hero from "@/components/hero.js";
 import Marquee from "@/components/marqueeImg.js";
@@ -12,17 +18,11 @@ import AnimatedCursor from "react-animated-cursor";
 import Strip from "@/components/Strips";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
- 
+import UiProject from "@/components/UiProject";
+
 import WorkProcess from "@/components/Work-Process";
 import Preloader from "@/components/preloader";
 const Myfunction = () => {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
-
   const header = useRef(null);
   const hero = useRef(null);
   const marquee = useRef(null);
@@ -62,18 +62,19 @@ const Myfunction = () => {
       ref: project,
     },
   };
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh();
-    const loader = () =>{
+    const loader = () => {
       setTimeout(() => {
         setLoading(false);
       }, 2500);
-    }
+    };
 
-    loader()
-  }, [])
+    loader();
+  }, []);
   return (
     <React.Fragment>
       {loading ? (
@@ -115,9 +116,12 @@ const Myfunction = () => {
           <div className="w-full overflow-hidden iphone:mt-10 ipad-tabletmt-[150px] desktop:mt-[200px]">
             <Marquee ref={refStore.marqueeRef.ref} refStore={refStore} />
           </div>
+
+           
           <Responsive ref={refStore.responsiveRef.ref} refStore={refStore} />
           <DEs ref={refStore.desRef.ref} refStore={refStore} />
           <Strip ref={refStore.stripRef.ref} refStore={refStore} />
+          <UiProject />
           <WorkProcess ref={refStore.workProcessRef.ref} refStore={refStore} />
           <Project ref={refStore.projectRef.ref} refStore={refStore} />
           <Footer ref={refStore.footerRef.ref} refStore={refStore} />

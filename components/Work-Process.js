@@ -41,7 +41,7 @@ const workProcess = forwardRef((props, ref) =>{
     return (
       <React.Fragment>
         <div
-          className="ipad-tablet:mt-[250px]  w-full flex justify-center items-center "
+          className="ipad-tablet:mt-[100px]  w-full flex justify-center items-center "
           ref={ref}
         >
           <div className="w-full relative z-[9]  flex items-end flex-col  ">
