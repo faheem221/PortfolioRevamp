@@ -5,7 +5,7 @@ import { LayoutGrid } from "../components/ui/layout-grid";
 export default function UiProject() {
   return (
     <div className="h-[1500px] flex-col flex justify-center items-center py-18 w-full">
-      <p className="w-full px-10 text-[9em] font-Satoshi tracking-tighter font-semibold">
+      <p className="w-full px-10 iphone:text-[2em] ipad-tablet:text-[9em] font-Satoshi tracking-tighter font-semibold">
         Ui Designs
       </p>
       <LayoutGrid cards={cards} />
