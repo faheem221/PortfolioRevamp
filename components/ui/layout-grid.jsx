@@ -19,7 +19,7 @@ export const LayoutGrid = ({ cards }) => {
   };
 
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3 mx-auto gap-4 relative">
+    <div className="w-full h-full iphone:p-2 ipad-tablet:p-10 grid iphone:grid-cols-1  md:grid-cols-3 mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -40,11 +40,13 @@ export const LayoutGrid = ({ cards }) => {
             {selected
               ? ""
               : card.content && (
-                  <div className="absolute transition-all duration-300 group-hover:bottom-0 bottom-[-90px] flex flex-col p-3  h-1/2 w-full bg-gradient-to-t from-black/80 to-black/5">
+                  <div className="absolute transition-all duration-300 group-hover:bottom-0 bottom-[-90px] flex flex-col p-3  h-1/2 w-full bg-gradient-to-t from-black/100 to-black/10">
                     <p className="text-slate-50 text-[1.8em] font-Rubik font-[500]">
                       {card.content}
                     </p>
-                    <p className="text-slate-50 text-[1em] font-satoshi">{card.description}</p>
+                    <p className="text-slate-50 text-[1em] font-satoshi">
+                      {card.description}
+                    </p>
                   </div>
                 )}
           </motion.div>
@@ -58,7 +60,6 @@ export const LayoutGrid = ({ cards }) => {
         )}
         animate={{ opacity: selected?.id ? 0.1 : 0 }}
       ></motion.div>
-    
     </div>
   );
 };

@@ -107,7 +107,7 @@ const strip = forwardRef(( props, ref)=>{
     return (
       <React.Fragment>
         <div
-          className="w-full   iphone:h-[55vh] ipad-tablet:h-[75vh] desktop:h-[1000px] overflow-hidden relative flex justify-center items-center iphone:mt-16"
+          className="w-full iphone:hidden ipad-tablet:flex iphone:h-[55vh] ipad-tablet:h-[75vh] desktop:h-[1000px] overflow-hidden relative flex justify-center items-center iphone:mt-16"
           ref={ref}
         >
           <img
