@@ -44,7 +44,7 @@ const head = forwardRef((props, ref) => {
   };
 
   const openPdfInNewTab = () => {
-    const pdfUrl = "./Faheem_ResumeN.pdf";
+    const pdfUrl = "./resume.png";
     window.open(pdfUrl, "_blank");
   };
 
