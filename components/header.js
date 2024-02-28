@@ -110,16 +110,16 @@ const head = forwardRef((props, ref) => {
             </motion.i>
           </div>
 
-          <div className="flex items-center gap-5 heroBox">
+          <div className="flex items-center iphone:gap-1 ipad-tablet:gap-5 heroBox">
             <motion.a
               onClick={projectClick}
-              className='text-slate-900 flex  iphone:text-[1em] ipad-tablet:text-[1.25em] relative  after:content-[""] after:w-0 after:h-[1px] cursor-pointer after:bg-slate-900 after:absolute after:bottom-0 after:left-0  hover:after:w-full after:transition-all after:duration-300'
+              className='text-slate-900 flex iphone:text-[.9em] ipad-tablet:text-[1.25em] relative  after:content-[""] after:w-0 after:h-[1px] cursor-pointer after:bg-slate-900 after:absolute after:bottom-0 after:left-0  hover:after:w-full after:transition-all after:duration-300'
             >
               Projects <RxArrowTopRight />
             </motion.a>
             <a
               href={"https://www.behance.net/faheemkhan72"}
-              className='text-slate-900 flex iphone:text-[1em] ipad-tablet:text-[1.25em] relative  after:content-[""] after:w-0 after:h-[1px] cursor-pointer after:bg-slate-900 after:absolute after:bottom-0 after:left-0  hover:after:w-full after:transition-all after:duration-300'
+              className='text-slate-900 flex iphone:text-[.9em] ipad-tablet:text-[1.25em] relative  after:content-[""] after:w-0 after:h-[1px] cursor-pointer after:bg-slate-900 after:absolute after:bottom-0 after:left-0  hover:after:w-full after:transition-all after:duration-300'
             >
               Behance <RxArrowTopRight />
             </a>
