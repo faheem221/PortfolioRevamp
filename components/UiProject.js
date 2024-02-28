@@ -64,7 +64,7 @@ const cards = [
   {
     id: 6,
     className: "iphone:col-span-2 md:col-span-1 row-span-2 ",
-    videoUrl: "https://streamable.com/e/9l8ff5?quality=highest",
+    videoUrl: "https://streamable.com/e/9l8ff5",
     isImage: false,
   },
 ];
