@@ -6,6 +6,8 @@ import { GrLinkedin } from "react-icons/gr";
 import { FaGithubSquare } from "react-icons/fa";
 import { TfiInfinite } from "react-icons/tfi";
 import "./styles.css";
+import { RxArrowTopRight } from "react-icons/rx";
+
 const head = forwardRef((props, ref) => {
   const [ham, setHam] = useState(false);
   useEffect(() => {
@@ -111,10 +113,16 @@ const head = forwardRef((props, ref) => {
           <div className="flex items-center gap-5 heroBox">
             <motion.a
               onClick={projectClick}
-              className='text-slate-900 iphone:text-[1em] ipad-tablet:text-[1.25em] relative  after:content-[""] after:w-0 after:h-[1px] cursor-pointer after:bg-slate-900 after:absolute after:bottom-0 after:left-0  hover:after:w-full after:transition-all after:duration-300'
+              className='text-slate-900 flex  iphone:text-[1em] ipad-tablet:text-[1.25em] relative  after:content-[""] after:w-0 after:h-[1px] cursor-pointer after:bg-slate-900 after:absolute after:bottom-0 after:left-0  hover:after:w-full after:transition-all after:duration-300'
             >
-              Projects
+              Projects <RxArrowTopRight />
             </motion.a>
+            <a
+              href={"https://www.behance.net/faheemkhan72"}
+              className='text-slate-900 flex iphone:text-[1em] ipad-tablet:text-[1.25em] relative  after:content-[""] after:w-0 after:h-[1px] cursor-pointer after:bg-slate-900 after:absolute after:bottom-0 after:left-0  hover:after:w-full after:transition-all after:duration-300'
+            >
+              Behance <RxArrowTopRight />
+            </a>
             <motion.div
               className={`ipad-tablet:w-20 ipad-tablet:h-10 iphone:w-16 iphone:h-8 transition-all duration-300 rounded-full  flex justify-center items-center  ${
                 ham

@@ -19,7 +19,7 @@ import Strip from "@/components/Strips";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import UiProject from "@/components/UiProject";
-
+import { HiArrowUp } from "react-icons/hi";
 import WorkProcess from "@/components/Work-Process";
 import Preloader from "@/components/preloader";
 const Myfunction = () => {
@@ -75,6 +75,29 @@ const Myfunction = () => {
 
     loader();
   }, []);
+
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY; // => scroll position
+    if (scrollPosition > 200) {
+      setShowTopBtn(true);
+    } else {
+      setShowTopBtn(false);
+    }
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <React.Fragment>
       {loading ? (
@@ -111,13 +134,22 @@ const Myfunction = () => {
               ".link",
             ]}
           />
+
+          {showTopBtn && (
+            <div
+              onClick={scrollTop}
+              className="w-[50px] fixed bottom-10 z-[9999] right-10 cursor-pointer h-[50px] flex justify-center items-center bg-slate-900 hover:bg-black rounded-full "
+            >
+              <HiArrowUp className="text-slate-100 text-[1.3em]" />
+            </div>
+          )}
+
           <Header ref={refStore.headerRef.ref} refStore={refStore} />
           <Hero ref={refStore.heroRef.ref} refStore={refStore} />
           <div className="w-full overflow-hidden iphone:mt-10 ipad-tabletmt-[150px] desktop:mt-[200px]">
             <Marquee ref={refStore.marqueeRef.ref} refStore={refStore} />
           </div>
 
-           
           <Responsive ref={refStore.responsiveRef.ref} refStore={refStore} />
           <DEs ref={refStore.desRef.ref} refStore={refStore} />
           <Strip ref={refStore.stripRef.ref} refStore={refStore} />
