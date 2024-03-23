@@ -15,41 +15,32 @@ import "./styles.css";
 const myProjects = [
   {
     id: 0,
-    name: "iPhone 14",
-    img: "iphone-14-bg.png",
-    year: 2023,
-    link: "https://faheem221.github.io/Apple-Iphone14/",
-  },
-
-  {
-    id: 1,
-    name: "News App",
-    img: "newsApp.png",
-    year: 2023,
-    link: "https://bestsports.netlify.app/",
-  },
-
-  {
-    id: 2,
     name: "Acap",
     img: "acap.png",
-    year: 2023,
+    year: 2022,
     link: "https://acapresumebuilder.netlify.app/",
   },
 
   {
-    id: 3,
+    id: 1,
     name: "Usability hub",
     img: "usabilityLogo-bg.png",
-    year: 2023,
+    year: 2022,
     link: "https://faheem221.github.io/Usability-Hub/",
   },
   {
-    id: 4,
+    id: 2,
     name: "Cythia ugwu",
     img: "cy-bg.png",
     year: 2023,
     link: "https://faheem221.github.io/cynthiaugwu/",
+  },
+  {
+    id: 3,
+    name: "Bookish",
+    img: "bookish.png",
+    year: 2024,
+    link: "https://bookish-sand.vercel.app/",
   },
 ];
 
