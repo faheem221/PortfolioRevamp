@@ -42,6 +42,13 @@ const myProjects = [
     year: 2024,
     link: "https://bookish-sand.vercel.app/",
   },
+  {
+    id: 4,
+    name: "landing page",
+    img: null,
+    year: 2022,
+    link: "https://okalaprojectio.netlify.app/",
+  },
 ];
 
 const Projects = forwardRef((props, ref) => {
