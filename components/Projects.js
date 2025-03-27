@@ -180,21 +180,21 @@ const Projects = forwardRef((props, ref) => {
                   <p className="iphone:text-[1rem] ipad-tablet:text-[3rem] font-Satoshi text-slate-900 ">
                     {project.year}
                   </p>
-              <div    
+            
                    
-                        <img
- style={{
+                  <img
+                       style={{
                       transform: `translateX(${
                         mousePos.x - 60 - imgPos.left / 2
                       }px) translateY(${mousePos.y - 200}px) `,
                       transition: "all 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
                       top: 0,
                       bottom: 0,
-                    }} className={'size-40 bg-yellow-200'}>
-                 ref={imgRef}
+                    }} 
+                     ref={imgRef}
                     src={activeIndex === project.id ? project.img : undefined}
-                    className="w-full h-full object-contain iphone:hidden ipad-tablet:block  pointer-events-none fixed z-[22]"
-                  /></div>
+                    className="w-full h-full w-[300px] aspect-square bg-yellow-100 object-contain iphone:hidden ipad-tablet:block  pointer-events-none fixed z-[22]"
+                  />
                 </div>
               </Link>
             );
