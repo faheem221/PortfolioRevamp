@@ -186,7 +186,7 @@ const Projects = forwardRef((props, ref) => {
                        style={{
                       transform: `translateX(${
                         mousePos.x - 60 - imgPos.left / 2
-                      }px) translateY(${mousePos.y - 200}px) `,
+                      }px) translateY(${mousePos.y - 100}px) `,
                       transition: "all 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
                       top: 0,
                       bottom: 0,
