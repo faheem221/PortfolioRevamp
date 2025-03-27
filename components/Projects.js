@@ -181,7 +181,9 @@ const Projects = forwardRef((props, ref) => {
                     {project.year}
                   </p>
               <div    
-                    style={{
+                   
+                        <img
+ style={{
                       transform: `translateX(${
                         mousePos.x - 60 - imgPos.left / 2
                       }px) translateY(${mousePos.y - 200}px) `,
@@ -189,7 +191,6 @@ const Projects = forwardRef((props, ref) => {
                       top: 0,
                       bottom: 0,
                     }} className={'size-40 bg-yellow-200'}>
-                        <img
                  ref={imgRef}
                     src={activeIndex === project.id ? project.img : undefined}
                     className="w-full h-full object-contain iphone:hidden ipad-tablet:block  pointer-events-none fixed z-[22]"
