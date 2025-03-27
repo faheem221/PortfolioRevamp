@@ -193,7 +193,7 @@ const Projects = forwardRef((props, ref) => {
                     }} 
                      ref={imgRef}
                     src={activeIndex === project.id ? project.img : undefined}
-                    className=" w-[200px] aspect-square bg-yellow-100 object-contain iphone:hidden ipad-tablet:block  pointer-events-none fixed z-[22]"
+                     className="w-[400px] iphone:hidden ipad-tablet:block  pointer-events-none fixed z-[22]"
                   />
                 </div>
               </Link>
