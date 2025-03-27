@@ -15,39 +15,45 @@ import "./styles.css";
 const myProjects = [
   {
     id: 0,
-    name: "Acap",
-    img: "acap.png",
-    year: 2022,
-    link: "https://acapresumebuilder.netlify.app/",
-  },
-
-  {
-    id: 1,
     name: "Usability hub",
     img: "usabilityLogo-bg.png",
     year: 2022,
     link: "https://faheem221.github.io/Usability-Hub/",
   },
   {
+    id: 1,
+    name: "landing page",
+    img: '/Landing-page.png',
+    year: 2022,
+    link: "https://okalaprojectio.netlify.app/",
+  },
+  {
     id: 2,
-    name: "Cythia ugwu",
-    img: "cy-bg.png",
-    year: 2023,
-    link: "https://faheem221.github.io/cynthiaugwu/",
+    name: "Insight Vision",
+    img: '/Insight-Vision.png',
+    year: 2022,
+    link: "https://insightvision.marketing/",
   },
   {
     id: 3,
-    name: "Bookish",
-    img: "bookish.png",
-    year: 2024,
-    link: "https://bookish-sand.vercel.app/",
+    name: "Bizgrowth Consultancy",
+    img: '/Bizgrowth.png',
+    year: 2022,
+    link: "https://www.bizgrowthconsultancy.com/",
   },
   {
     id: 4,
-    name: "landing page",
-    img: null,
+    name: "BSHH",
+    img: '/BSHH.png',
     year: 2022,
-    link: "https://okalaprojectio.netlify.app/",
+    link: "https://bsholidayhomes.com/",
+  },
+  {
+    id: 5,
+    name: "Menlocloud",
+      img: '/Menlocloud.png',
+    year: 2024,
+    link: "https://www.menlocloud.ai/",
   },
 ];
 
@@ -168,10 +174,10 @@ const Projects = forwardRef((props, ref) => {
                   }}
                   onMouseLeave={mouseLeave}
                 >
-                  <p className="iphone:text-[2rem] ipad-tablet:text-[4rem] font-Satoshi text-slate-900 font-bold group-hover:translate-x-[50%]  transition-all duration-300 ease-out">
+                  <p className="iphone:text-[2rem] ipad-tablet:text-[3rem] font-Satoshi text-slate-900 font-bold group-hover:translate-x-[50%]  transition-all duration-300 ease-out">
                     {project.name}
                   </p>
-                  <p className="iphone:text-[1rem] ipad-tablet:text-[4rem] font-Satoshi text-slate-900 ">
+                  <p className="iphone:text-[1rem] ipad-tablet:text-[3rem] font-Satoshi text-slate-900 ">
                     {project.year}
                   </p>
                   <img
